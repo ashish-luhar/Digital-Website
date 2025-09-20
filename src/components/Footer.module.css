@@ -1,0 +1,130 @@
+.footer {
+  padding: 80px 0 30px;
+  border-top: none;
+  font-family: 'Poppins', sans-serif;
+  color: black;
+  
+  /* Applying the same transparent and blurry background from the header */
+  background-color: rgb(114, 212, 212); 
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.footerCol {
+  margin-bottom: 40px;
+}
+
+.footerTitle {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #000000;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.footerTitle::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 50px;
+  background-color: #c8024e;
+  border-radius: 2px;
+}
+
+.footerText {
+  color: black;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+.footerLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerLinks li {
+  margin-bottom: 15px;
+}
+
+.footerLinks a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.footerLinks a:hover {
+  color: #da0d3d;
+  transform: translateX(5px);
+}
+
+.contactCol {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contactInfo {
+  color: black;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.contactInfo i {
+  margin-right: 15px;
+  color: #0d0e0d;
+  font-size: 1.2rem;
+}
+
+.contactButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 25px;
+  border-radius: 30px;
+  background: linear-gradient(45deg, #6AFF6A, #FFEB3B);
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  box-shadow: 0 4px 15px rgba(106, 255, 106, 0.4);
+}
+
+.contactButton:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(7, 220, 7, 0.6);
+  color: black;
+}
+
+.copyright {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 25px;
+  margin-top: 50px;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .footerCol {
+    text-align: center;
+  }
+  .footerTitle::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .contactCol {
+    align-items: center;
+  }
+  .footerLinks {
+    text-align: center;
+  }
+}

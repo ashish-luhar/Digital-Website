@@ -1,0 +1,451 @@
+/* AboutPage.module.css */
+
+/* --- General Page and Background --- */
+.aboutPage {
+  padding-bottom: 80px;
+  background-color: #0c181c; /* अब सिर्फ़ गहरा हरा रंग है */
+  color: white;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+/* हमने .aboutPage::before सेलेक्टर को हटा दिया है, ताकि वह सफेद डॉट पैटर्न न दिखे */
+/* अब कोई बाहरी बैकग्राउंड इमेज नहीं होगी */
+
+@keyframes backgroundMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 1000px; }
+}
+
+/* --- About Hero Section --- */
+.aboutHero {
+  background: linear-gradient(135deg, #0c181c, #152226, #1a2a2b); /* गहरे हरे रंग का ग्रेडिएंट */
+  color: white;
+  padding: 120px 0 100px;
+  text-align: center;
+  margin-bottom: 80px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.aboutHero::before,
+.aboutHero::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(106, 255, 106, 0.2) 0%, transparent 50%);
+  animation: rotate 30s linear infinite;
+  z-index: 1;
+}
+
+.aboutHero::after {
+  background: radial-gradient(circle, rgba(255, 235, 59, 0.15) 0%, transparent 40%);
+  animation: rotate 20s linear infinite reverse;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.aboutHero h1 {
+  font-size: 5rem;
+  font-weight: 800;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 0 20px rgba(106, 255, 106, 0.9), 0 0 40px rgba(255, 235, 59, 0.9);
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 15px rgba(106, 255, 106, 0.7), 0 0 25px rgba(255, 235, 59, 0.7);
+  }
+  100% {
+    text-shadow: 0 0 25px rgba(106, 255, 106, 0.9), 0 0 40px rgba(255, 235, 59, 0.9);
+  }
+}
+
+.aboutHero p {
+  font-size: 1.6rem;
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0.9;
+  position: relative;
+  z-index: 2;
+  line-height: 1.6;
+}
+
+/* --- Other Sections --- */
+.missionSection {
+  margin-bottom: 100px;
+  position: relative;
+  z-index: 1;
+}
+
+.missionContent h2 {
+  color: #fff;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 2.5rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 15px;
+}
+.missionContent h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #6AFF6A, #FFEB3B);
+  border-radius: 2px;
+}
+
+.missionContent p {
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.missionImage {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  background: linear-gradient(45deg, #6AFF6A, #FFEB3B, #6AFF6A);
+  background-size: 200% 200%;
+  animation: gradientBorder 3s ease infinite;
+  padding: 5px;
+}
+
+.missionImageElement {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+@keyframes gradientBorder {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.missionIcon {
+  margin-bottom: 20px;
+  color: #6AFF6A;
+}
+
+.heroButtons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.primaryBtn, .secondaryBtn {
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 1px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.primaryBtn {
+  background: linear-gradient(to right, #6AFF6A, #FFEB3B);
+  color: #0c181c;
+}
+
+.primaryBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(106, 255, 106, 0.4);
+}
+
+.secondaryBtn {
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.secondaryBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+.highlight {
+  background: linear-gradient(90deg, #6AFF6A, #FFEB3B);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+}
+
+.missionStats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.statItem {
+  text-align: center;
+  padding: 15px;
+  flex: 1;
+  min-width: 120px;
+  background-color: #122124;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(106, 255, 106, 0.2);
+  transition: all 0.3s ease;
+}
+
+.statItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(106, 255, 106, 0.2);
+}
+
+.statNumber {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #6AFF6A;
+  margin-bottom: 5px;
+}
+
+.statLabel {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.historySection {
+  margin-bottom: 100px;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 50px auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background: linear-gradient(to bottom, #6AFF6A, #FFEB3B);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+  border-radius: 3px;
+}
+
+.timelineItem {
+  padding: 10px 40px;
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+
+.timelineItem:nth-child(odd) {
+  left: 0;
+}
+
+.timelineItem:nth-child(even) {
+  left: 50%;
+}
+
+.timelineItem::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: -10px;
+  background: linear-gradient(45deg, #6AFF6A, #FFEB3B);
+  border-radius: 50%;
+  top: 15px;
+  z-index: 1;
+  box-shadow: 0 0 10px rgba(106, 255, 106, 0.5);
+}
+
+.timelineItem:nth-child(even)::after {
+  left: -10px;
+}
+
+.timelineContent {
+  padding: 20px 30px;
+  background-color: #122124;
+  position: relative;
+  border-radius: 15px;
+  border: 1px solid rgba(106, 255, 106, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.timelineContent:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(106, 255, 106, 0.3);
+}
+
+.timelineYear {
+  min-width: 80px;
+  height: 80px;
+  background: linear-gradient(45deg, #6AFF6A, #FFEB3B);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  box-shadow: 0 5px 15px rgba(106, 255, 106, 0.3);
+}
+
+.timelineYear span {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.timelineBody {
+  flex: 1;
+}
+
+.timelineBody h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.timelineBody p {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.animate {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Responsive adjustments --- */
+@media (max-width: 992px) {
+  .aboutHero h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+  }
+  
+  .aboutHero p {
+    font-size: 1.1rem;
+  }
+  
+  .timeline::after {
+    left: 31px;
+  }
+  
+  .timelineItem {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  
+  .timelineItem:nth-child(even) {
+    left: 0%;
+  }
+  
+  .timelineItem:nth-child(odd)::after,
+  .timelineItem:nth-child(even)::after {
+    left: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutHero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .aboutHero p {
+    font-size: 1rem;
+  }
+  
+  .missionContent h2 {
+    font-size: 2rem;
+  }
+  
+  .heroButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .primaryBtn, .secondaryBtn {
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  .timelineContent {
+    flex-direction: column;
+  }
+  
+  .timelineYear {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .aboutHero {
+    padding: 80px 0 60px;
+  }
+  
+  .aboutHero h1 {
+    font-size: 2rem;
+  }
+  
+  .statItem {
+    flex: 0 0 100%;
+    margin-bottom: 15px;
+  }
+  
+  .timelineItem {
+    padding-left: 60px;
+  }
+}

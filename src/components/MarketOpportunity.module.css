@@ -1,0 +1,156 @@
+.marketSection {
+  padding: 100px 0;
+  background-color: transparent !important; /* Made transparent */
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.sectionTitle {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  background: linear-gradient(to right, #6AFF6A, #FFEB3B);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contentRow {
+  position: relative;
+  z-index: 2;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.intro {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.marketList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.marketList li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.marketList li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #6AFF6A;
+  font-size: 1.5rem;
+}
+
+.highlight {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.chartContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pieChartWrapper {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.pieChart {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 30px rgba(106, 255, 106, 0.3);
+  position: relative;
+}
+
+.chartCenter {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #0a0a0a;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.chartLegend {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.colorBox {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+@media (max-width: 992px) {
+  .chartContent {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .marketSection {
+    padding: 70px 0;
+  }
+  .sectionTitle {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+  .pieChartWrapper {
+    width: 250px;
+    height: 250px;
+  }
+  .chartCenter {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 576px) {
+  .sectionTitle {
+    font-size: 2rem;
+  }
+}

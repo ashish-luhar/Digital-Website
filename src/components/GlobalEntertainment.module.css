@@ -1,0 +1,198 @@
+.entertainmentSection {
+  padding: 100px 0;
+  background-color:transparent !important;
+  color: white;
+}
+
+.sectionTitle {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  text-align: center;
+  /* Title gradient changed to green/yellow */
+  background: linear-gradient(to right, #6AFF6A, #FFEB3B);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.textLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: right;
+  padding-right: 50px;
+}
+
+.textRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  padding-left: 50px;
+}
+
+.featureItem {
+  margin-bottom: 30px;
+}
+
+.featureContent {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featureItem:hover .featureContent {
+  transform: translateY(-5px);
+  /* Hover shadow changed to green/yellow theme */
+  box-shadow: 0 10px 20px rgba(106, 255, 106, 0.4);
+}
+
+.featureTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.featureDescription {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+.donutChartContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.donutChartWrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Box shadow and glow changed to green theme */
+  box-shadow: 0 0 25px rgba(106, 255, 106, 0.6);
+  animation: pulseGlow 2s infinite ease-in-out;
+  border-radius: 50%;
+  
+  /* Conic-gradient colors changed to green/yellow theme */
+  background: conic-gradient(
+    from 15deg,
+    #6AFF6A 0%,
+    #6AFF6A 33.3%,
+    #FFEB3B 33.3%,
+    #FFEB3B 66.6%,
+    #88E534 66.6%,
+    #88E534 100%
+  );
+}
+
+.donutChart {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centerRing {
+  width: 75%;
+  height: 75%;
+  background-color: #0a0a0a;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chartSegment {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  /* Glow changed to green theme */
+  box-shadow: 0 0 10px rgba(106, 255, 106, 0.5); 
+}
+
+.audiobooksSegment {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.gamesSegment {
+  bottom: 0;
+  left: 0;
+  transform: translate(50%, 50%);
+}
+
+.recipesSegment {
+  bottom: 0;
+  right: 0;
+  transform: translate(-50%, 50%);
+}
+
+.segmentIcon {
+  font-size: 2.5rem;
+  color: #fff;
+  /* Icon shadow changed to green theme */
+  filter: drop-shadow(0 0 5px #6AFF6A);
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 20px rgba(106, 255, 106, 0.5); }
+  50% { box-shadow: 0 0 35px rgba(106, 255, 106, 0.8); }
+  100% { box-shadow: 0 0 20px rgba(106, 255, 106, 0.5); }
+}
+
+.footerText {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 992px) {
+  .textLeft, .textRight {
+    padding: 0 20px;
+    text-align: left;
+    align-items: flex-start;
+  }
+  .donutChartContainer {
+    margin: 50px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 2.2rem;
+  }
+  .textLeft, .textRight {
+    padding: 0 15px;
+  }
+}

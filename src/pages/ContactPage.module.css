@@ -1,0 +1,218 @@
+/* ContactPage.module.css */
+
+.contactPage {
+    padding-bottom: 0;
+    position: relative;
+    background-color: #0c181c; /* Changed to your preferred dark green */
+    color: white;
+    overflow: hidden;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+.backgroundCircles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(150px);
+    opacity: 0.3;
+    animation: floating 25s ease-in-out infinite alternate;
+}
+
+.circle1 {
+    top: 10%;
+    left: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, #6AFF6A, transparent); /* Changed to green */
+}
+
+.circle2 {
+    bottom: -15%;
+    right: -15%;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, #FFEB3B, transparent); /* Changed to gold */
+    animation-delay: 2s;
+}
+
+.circle3 {
+    top: 30%;
+    right: 20%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, #1E3F2A, transparent); /* Changed to a darker green */
+    animation-delay: 5s;
+}
+
+@keyframes floating {
+    0% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(50px, -50px) scale(1.1); }
+    100% { transform: translate(0, 0) scale(1); }
+}
+
+.contactHero {
+    background: linear-gradient(135deg, #0c181c 0%, #152226 100%); /* Changed to your dark green gradient */
+    color: white;
+    padding: 120px 0 100px;
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border-bottom-left-radius: 40% 8%;
+    border-bottom-right-radius: 40% 8%;
+}
+
+.contactHero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px rgba(106, 255, 106, 0.3); /* Changed to green shadow */
+}
+
+.contactHero p {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+.contactInfoCard {
+    background: rgba(18, 33, 36, 0.8); /* Changed to a slightly lighter dark green */
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(106, 255, 106, 0.2); /* Changed to a green border */
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.contactInfoCard h2 {
+    color: #6AFF6A; /* Changed to green */
+    margin-bottom: 25px;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.introText {
+    font-size: 1.1rem;
+    color: #b0b0b0;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.infoGrid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.infoItem {
+    background: #1a2a2b; /* Changed to a consistent dark green */
+    padding: 30px;
+    border-radius: 15px;
+    flex-basis: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.infoItem:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(106, 255, 106, 0.4); /* Changed to a green shadow */
+}
+
+.iconContainer {
+    background: rgba(106, 255, 106, 0.1); /* Changed to a green background */
+    border-radius: 50%;
+    padding: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.icon {
+    color: #6AFF6A; /* Changed to green */
+}
+
+.infoContent h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.infoContent p {
+    color: #b0b0b0;
+    margin-bottom: 10px;
+}
+
+.meetingLink {
+    display: inline-block;
+    background: linear-gradient(45deg, #6AFF6A, #FFEB3B); /* Changed to green-gold gradient */
+    color: #0c181c; /* Changed text color for better contrast */
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(106, 255, 106, 0.4); /* Changed to green shadow */
+}
+
+.meetingLink:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(106, 255, 106, 0.6); /* Changed to a stronger green shadow */
+    color: #0c181c;
+}
+
+.closingText {
+    font-size: 1rem;
+    color: #888;
+    margin-top: 20px;
+}
+
+@media (max-width: 992px) {
+    .contactInfoCard {
+        padding: 40px;
+    }
+    .infoGrid {
+        flex-direction: column;
+        gap: 25px;
+    }
+    .infoItem {
+        flex-basis: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .contactHero {
+        padding: 80px 0 60px;
+    }
+    .contactHero h1 {
+        font-size: 3rem;
+    }
+    .contactHero p {
+        font-size: 1.1rem;
+    }
+    .contactInfoCard h2 {
+        font-size: 2rem;
+    }
+}

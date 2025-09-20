@@ -1,0 +1,120 @@
+.partnershipSection {
+  padding: 100px 0;
+  background-color: transparent !important;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.sectionTitle {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  /* Title ka gradient green/yellow kiya gaya */
+  background: linear-gradient(to right, #6AFF6A, #FFEB3B);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.globeImageCol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.globeImageWrapper {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.globeImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: rotateGlobe 20s linear infinite;
+  background-color: transparent;
+}
+
+@keyframes rotateGlobe {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.benefitsList {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.benefitItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.benefitIcon {
+  width: 40px;
+  height: 40px;
+  /* Icon ka gradient green/yellow kiya gaya */
+  background: linear-gradient(45deg, #6AFF6A, #FFEB3B);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  /* Icon shadow green/yellow kiya gaya */
+  box-shadow: 0 0 10px rgba(106, 255, 106, 0.5);
+  color: #000000;
+}
+
+.benefitContent {
+  flex-grow: 1;
+}
+
+.benefitTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.benefitDescription {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+  .sectionTitle {
+    text-align: center;
+    margin-top: 30px;
+  }
+  .globeImageCol {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .partnershipSection {
+    padding: 70px 0;
+  }
+  .sectionTitle {
+    font-size: 2.5rem;
+  }
+  .benefitTitle {
+    font-size: 1.3rem;
+  }
+}

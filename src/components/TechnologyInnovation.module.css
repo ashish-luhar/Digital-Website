@@ -1,0 +1,129 @@
+.techSection {
+  padding: 100px 0;
+  background-color: transparent !important; /* Made transparent */
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.sectionTitle {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  background: linear-gradient(to right, #6AFF6A, #FFEB3B);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.subTitle {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #6AFF6A;
+  margin-top: 10px;
+}
+
+.techCards {
+  margin-bottom: 50px;
+}
+
+.techCard {
+  background: rgba(0, 0, 0, 0.6) !important;
+  border: none;
+  border-radius: 15px;
+  height: 350px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 5px 20px rgba(106, 255, 106, 0.15);
+  border: 1px solid rgba(106, 255, 106, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.techCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(106, 255, 106, 0.4);
+  border-color: rgba(106, 255, 106, 0.4);
+}
+
+.iconWrapper {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(45deg, #6AFF6A, #FFEB3B);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  box-shadow: 0 0 20px rgba(106, 255, 106, 0.5);
+  color: #000000;
+  flex-shrink: 0;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #6AFF6A !important;
+}
+
+.cardText {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+.commitment {
+  text-align: center;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .techSection {
+    padding: 70px 0;
+  }
+  .sectionTitle {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+  .subTitle {
+    font-size: 1.8rem;
+  }
+  .techCard {
+    height: auto;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .sectionTitle {
+    font-size: 2rem;
+  }
+  .subTitle {
+    font-size: 1.2rem;
+  }
+  .cardTitle {
+    font-size: 1.3rem;
+  }
+  .iconWrapper {
+    width: 60px;
+    height: 60px;
+  }
+}

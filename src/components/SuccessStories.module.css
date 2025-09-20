@@ -1,0 +1,112 @@
+.successSection {
+  position: relative;
+  padding: 100px 0;
+  background-color: transparent !important; /* Made transparent */
+  color: white;
+  overflow: hidden;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.sectionTitle {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  background: linear-gradient(to right, #6AFF6A, #FFEB3B);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.statsRow {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 60px;
+}
+
+.statCard {
+  padding: 40px 20px;
+  height: 100%;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.6) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 20px rgba(106, 255, 106, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(106, 255, 106, 0.2);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.statCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(106, 255, 106, 0.4);
+  border-color: rgba(106, 255, 106, 0.4);
+}
+
+.statIcon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(45deg, #6AFF6A, #FFEB3B);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  box-shadow: 0 0 20px rgba(106, 255, 106, 0.5);
+  color: #000000;
+}
+
+.statNumber {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #6AFF6A;
+  text-shadow: 0 0 10px rgba(106, 255, 106, 0.5);
+}
+
+.statTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.statDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 250px;
+}
+
+@media (max-width: 768px) {
+  .successSection {
+    padding: 70px 0;
+  }
+  .sectionTitle {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+  .statCard {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .sectionTitle {
+    font-size: 2rem;
+  }
+  .statNumber {
+    font-size: 2rem;
+  }
+  .statTitle {
+    font-size: 1.3rem;
+  }
+}
